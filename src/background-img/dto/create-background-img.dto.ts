@@ -1,8 +1,8 @@
-import { IsString } from "class-validator"
+import { IsString } from 'class-validator';
 
 export class CreateBackgroundImgDto {
     @IsString()
-    path: string
+    path: string;
     @IsString()
-    status: string
+    status: string;
 }

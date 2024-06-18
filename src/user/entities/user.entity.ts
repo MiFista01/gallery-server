@@ -1,25 +1,25 @@
-import { Column, DataType, Model, Table } from "sequelize-typescript";
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table
 export class User extends Model {
     @Column
-    name: string
+    name: string;
     @Column
-    email: string
+    email: string;
     @Column
-    phone: string
+    phone: string;
     @Column
-    avatar: string
+    avatar: string;
     @Column({
         type: DataType.TEXT,
-        allowNull: true
+        allowNull: true,
     })
-    text?: string
+    text?: string;
     @Column({
         type: DataType.TEXT,
-        allowNull: true
+        allowNull: true,
     })
-    mapSrc?: string
+    mapSrc?: string;
     @Column
-    password: string
+    password: string;
 }

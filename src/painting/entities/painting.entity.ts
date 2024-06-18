@@ -1,31 +1,34 @@
-import { Column, DataType, Model, Table } from "sequelize-typescript"
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table
 export class Painting extends Model {
     @Column
-    title: string
+    title: string;
 
     @Column
-    des:string
+    des: string;
 
     @Column
-    imgPath:string
+    imgPath: string;
+
+    @Column
+    size: string;
 
     @Column({
         type: DataType.INTEGER,
-        defaultValue: 0
+        defaultValue: 0,
     })
-    price:number
+    price: number;
 
     @Column({
         type: DataType.INTEGER,
-        defaultValue: 0
+        defaultValue: 0,
     })
-    orderCount:number
+    orderCount: number;
 
     @Column({
         type: DataType.INTEGER,
-        defaultValue: 0
+        defaultValue: 0,
     })
-    rating:number
+    rating: number;
 }

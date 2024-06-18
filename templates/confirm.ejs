@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telli pildile</title>
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+      margin-bottom: 0px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 5px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <h1>Tuli pildile nn</h1>
+  <h2>Kasutaja andmed:</h2>
+  <ul>
+    <li>Eesnimi Perekonnanimi: <%= order.name %>
+        <%= order.lastName %>
+    </li>
+    <li>Meil: <%= order.email %>
+    </li>
+    <li>Aadress: <%= order.address %>
+    </li>
+    <li>Postiindeks: <%= order.zip %>
+    </li>
+    <li>Linn: <%= order.city%>
+    </li>
+    <li>Telefoninumber: <%=order.phone%>
+    </li>
+  </ul>
+  <h2>Lisasoov kliendilt:</h2>
+  <p>
+    <% if (order.wishes) { %>
+      <%= order.wishes %>
+    <% } else { %>
+    --
+    <%}%>
+  </p>
+  <h2>Pildi andmed:</h2>
+  <ul>
+    <li>Maali mõõtmed: <%= painting.size %></li>
+    <li>Maali hind: <%= painting.price %></li>
+  </ul>
+  <img src="<%= painting.imgPath %>" alt="Pildi pilt" />
+</body>
+
+</html>

@@ -1,13 +1,13 @@
-import { IsOptional, IsString } from "class-validator";
+import { IsOptional, IsString } from 'class-validator';
 
 export class CreateNewsDto {
     @IsString()
-    title:String
+    title: String;
 
     @IsString()
-    text:string
+    text: string;
 
     @IsString()
     @IsOptional()
-    poster?:string
+    poster?: string;
 }

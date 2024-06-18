@@ -1,10 +1,10 @@
-import { Column, Model, Table } from "sequelize-typescript";
+import { Column, Model, Table } from 'sequelize-typescript';
 
 @Table
 export class BackgroundImg extends Model {
     @Column
-    path:string
+    path: string;
 
     @Column
-    status:boolean
+    status: boolean;
 }

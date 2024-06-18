@@ -3,18 +3,20 @@ import { BackgroundImgController } from './background-img.controller';
 import { BackgroundImgService } from './background-img.service';
 
 describe('BackgroundImgController', () => {
-  let controller: BackgroundImgController;
+    let controller: BackgroundImgController;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      controllers: [BackgroundImgController],
-      providers: [BackgroundImgService],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            controllers: [BackgroundImgController],
+            providers: [BackgroundImgService],
+        }).compile();
 
-    controller = module.get<BackgroundImgController>(BackgroundImgController);
-  });
+        controller = module.get<BackgroundImgController>(
+            BackgroundImgController,
+        );
+    });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+    it('should be defined', () => {
+        expect(controller).toBeDefined();
+    });
 });

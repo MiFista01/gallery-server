@@ -1,10 +1,12 @@
-import { IsNumber, IsString } from "class-validator"
+import { IsNumber, IsString } from 'class-validator';
 
 export class CreatePaintingDto {
     @IsString()
-    title:string
+    title: string;
     @IsString()
-    des:string
+    des: string;
+    @IsString()
+    size: string;
     @IsNumber()
-    price:number
+    price: number;
 }
