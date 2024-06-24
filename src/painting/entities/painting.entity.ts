@@ -6,7 +6,19 @@ export class Painting extends Model {
     title: string;
 
     @Column
+    rusTitle: string;
+
+    @Column
+    estTitle: string;
+
+    @Column
     des: string;
+
+    @Column
+    rusDes: string;
+
+    @Column
+    estDes: string;
 
     @Column
     imgPath: string;

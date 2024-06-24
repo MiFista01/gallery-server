@@ -91,8 +91,8 @@ export class PaintingService {
                 ...body,
             },
         });
-        await painting.update({ orderCount: painting.orderCount++ });
-        await painting.save();
+        await painting.increment('orderCount', { by: 1 });
+        console.log(painting)
         return [true, 'Tellimus edukalt vastu võetud'];
     }
 }

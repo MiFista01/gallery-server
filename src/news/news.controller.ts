@@ -1,15 +1,4 @@
-import {
-    Controller,
-    Get,
-    Post,
-    Body,
-    Patch,
-    Param,
-    Delete,
-    UseInterceptors,
-    UploadedFile,
-    UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, UploadedFile, UseGuards, } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { CreateNewsDto } from './dto/create-news.dto';
 import { UpdateNewsDto } from './dto/update-news.dto';
@@ -21,7 +10,7 @@ import { Public } from 'src/decorators/public.decorator';
 @UseGuards(AuthGuard)
 @Controller('news')
 export class NewsController {
-    constructor(private readonly newsService: NewsService) {}
+    constructor(private readonly newsService: NewsService) { }
 
     @Post()
     @UseInterceptors(

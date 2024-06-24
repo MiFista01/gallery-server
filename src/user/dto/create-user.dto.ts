@@ -6,6 +6,8 @@ export class CreateUserDto {
     @IsString()
     email: string;
     @IsString()
+    phone: string;
+    @IsString()
     avatar: string;
     @IsString()
     mapSrc?: string;

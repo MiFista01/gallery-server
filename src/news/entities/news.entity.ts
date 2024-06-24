@@ -6,7 +6,19 @@ export class News extends Model {
     title: string;
 
     @Column
+    rusTitle: string;
+
+    @Column
+    estTitle: string;
+
+    @Column
     text: string;
+
+    @Column
+    rusText: string;
+
+    @Column
+    estText: string;
 
     @Column
     poster: string;

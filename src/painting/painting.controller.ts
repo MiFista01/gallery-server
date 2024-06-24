@@ -1,15 +1,4 @@
-import {
-    Controller,
-    Get,
-    Post,
-    Body,
-    Patch,
-    Param,
-    Delete,
-    UseInterceptors,
-    UploadedFile,
-    UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, UploadedFile, UseGuards, } from '@nestjs/common';
 import { PaintingService } from './painting.service';
 import { CreatePaintingDto } from './dto/create-painting.dto';
 import { UpdatePaintingDto } from './dto/update-painting.dto';
@@ -35,7 +24,7 @@ interface FullOrder {
 @UseGuards(AuthGuard)
 @Controller('painting')
 export class PaintingController {
-    constructor(private readonly paintingService: PaintingService) {}
+    constructor(private readonly paintingService: PaintingService) { }
 
     @Post()
     @UseInterceptors(
